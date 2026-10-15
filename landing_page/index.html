@@ -25,6 +25,15 @@
     .stats div { text-align:center; }
     .stats b { display:block; font-size:1.8rem; color: var(--accent); }
     .stats span { color: var(--muted); font-size:.85rem; }
+    .pricing { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; margin-top:8px; }
+    .plan { background:var(--card); border:1px solid #334155; border-radius:16px; padding:28px 22px; text-align:center; position:relative; }
+    .plan.featured { border-color:var(--accent); box-shadow:0 0 0 2px rgba(56,189,248,.25); }
+    .plan .tag { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--accent); color:#04263a; font-size:.75rem; font-weight:700; padding:3px 12px; border-radius:999px; }
+    .plan h3 { margin-bottom:4px; }
+    .plan .price { font-size:2rem; font-weight:800; color:var(--accent); margin:8px 0 14px; }
+    .plan ul { list-style:none; text-align:right; margin:0 auto 18px; display:inline-block; }
+    .plan li { color:var(--muted); font-size:.9rem; padding:4px 0; }
+    .plan li::before { content:"✓ "; color:var(--accent); font-weight:700; }
     footer { text-align:center; padding: 40px 20px; color: var(--muted); font-size: .85rem; }
     a.link { color: var(--accent); }
   </style>
@@ -66,6 +75,46 @@
       <a class="btn" href="./app/">تشغيل أونلاين</a>
     </div>
   </main>
+
+  <section id="pricing" style="max-width:1060px;margin:64px auto 0;padding:0 20px;text-align:center;">
+    <h2 style="font-size:1.9rem;margin-bottom:6px;">💼 المنتجات والأسعار</h2>
+    <p style="color:var(--muted);margin-bottom:30px;">استخدم التطبيق مجاناً — أو امتلك الكود الكامل مع المصنع وابدأ مشروعك الخاص.</p>
+    <div class="pricing">
+      <div class="plan">
+        <h3>مجاني</h3>
+        <div class="price">0$</div>
+        <ul>
+          <li>استخدام التطبيق شخصياً</li>
+          <li>نسخة الويب + ويندوز + أندرويد</li>
+          <li>بدون كود المصدر</li>
+        </ul>
+        <a class="btn" href="./app/">تشغيل أونلاين</a>
+      </div>
+      <div class="plan featured">
+        <span class="tag">الأكثر طلباً</span>
+        <h3>حزمة البداية</h3>
+        <div class="price">29$</div>
+        <ul>
+          <li>كود Flutter كامل</li>
+          <li>مصنع بناء تلقائي</li>
+          <li>ترخيص تجاري لمشروع واحد</li>
+          <li>دليل المشتري + دعم</li>
+        </ul>
+        <a class="btn" href="https://github.com/mohazizkadibou-creator/electronic-vault/issues/new?title=Buy%20Starter%20Kit%20($29)&labels=purchase">اطلب الآن</a>
+      </div>
+      <div class="plan">
+        <h3>الوكالة</h3>
+        <div class="price">99$</div>
+        <ul>
+          <li>مشاريع غير محدودة</li>
+          <li>إزالة العلامة (White-label)</li>
+          <li>أولوية دعم</li>
+        </ul>
+        <a class="btn" href="https://github.com/mohazizkadibou-creator/electronic-vault/issues/new?title=Buy%20Agency%20License%20($99)&labels=purchase">اطلب الآن</a>
+      </div>
+    </div>
+    <p style="color:var(--muted);font-size:.85rem;margin-top:18px;">تحتاج تخصيصاً أو بناءً خاصاً؟ من 150$ — <a class="link" href="https://github.com/mohazizkadibou-creator/electronic-vault/issues/new?title=Custom%20Build%20Request">اطلب عرضاً</a>.</p>
+  </section>
 
   <footer>
     جميع الإصدارات متاحة على
