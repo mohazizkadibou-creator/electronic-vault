@@ -25,10 +25,15 @@ jobs:
           channel: stable
           cache: true
       - run: flutter pub get
-      - run: flutter build web --release --base-href /electronic-vault/
+      - run: flutter build web --release --base-href /electronic-vault/app/
+      - name: Assemble site (landing page + app)
+        run: |
+          mkdir -p site/app
+          cp -r build/web/* site/app/
+          cp landing_page/index.html site/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: build/web
+          path: site
 
   deploy:
     name: Deploy
